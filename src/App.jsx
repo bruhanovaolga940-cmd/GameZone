@@ -8,7 +8,7 @@ import Home from "./pages/home";
 import Login from "./pages/Login.jsx";
 import Registration from "./pages/Registration.jsx";
 import Clubs from "./pages/Clubs.jsx";
-import Club from "./pages/Club.jsx";
+import ClubDetailPage from "./pages/ClubDetaiPage.jsx";
 
 function App() {
 
@@ -21,8 +21,10 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/Login" element={<Login />}></Route>
           <Route path="/Registration" element={<Registration />}></Route>
-          <Route path="/Clubs" element={<Clubs />}></Route>
-          <Route path="/Club/:id" element={<Club />}></Route>
+          {/* Страница с клубами */}
+          <Route path="/Clubs" element={<Clubs />}></Route> 
+          {/* Страница определенного клуба */}
+          <Route path="/ClubDetailPage/:id" element={<ClubDetailPage />}></Route>
 
           
         </Routes>

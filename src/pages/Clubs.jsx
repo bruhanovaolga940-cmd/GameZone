@@ -1,25 +1,23 @@
-import Club from "./Club";
-import { clubs} from "../assets/helpers/ClubList";
+import { clubs } from "../assets/helpers/ClubList.jsx";
+import ClubCard   from "../assets/club/Clubs.jsx";
 
-const Clubs = () => {
-    return ( 
-        <main className="section">
-            <div className="container">
-                <h2 className="title-1">Projects</h2>
-                <ul className="projects">
+function Clubs() {
+    return (
+        <div className="container">
 
-                    {clubs.map((Club, id)=> {
-                        return(
-                            <Project key={id} 
-                            title={Club.title}
-                            index={id}/>
-                        )
-                    })}
+            <h1 style={{ margin: "32px 0 24px" }}>
+                Игровые клубы Красноярска
+            </h1>
 
-                </ul>
+            {/* Рендерим карточку для каждого клуба */}
+            <div className="clubs-grid">
+                {clubs.map(club => (
+                    <ClubCard key={club.id} club={club} />
+                ))}
             </div>
-        </main>
-     );
+
+        </div>
+    );
 }
- 
+
 export default Clubs;
