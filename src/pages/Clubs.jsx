@@ -1,7 +1,7 @@
 import { clubs } from "../assets/helpers/ClubList.jsx";
-import ClubCard   from "../assets/club/Clubs.jsx";
+import ClubCard   from "../assets/club/ClubCard.jsx";
 
-function Clubs() {
+const Clubs=()=> {
     return (
         <div className="container">
 
@@ -12,7 +12,11 @@ function Clubs() {
             {/* Рендерим карточку для каждого клуба */}
             <div className="clubs-grid">
                 {clubs.map(club => (
-                    <ClubCard key={club.id} club={club} />
+                    <ClubCard key={club.id} 
+                    club={club} 
+                    id={club.id} 
+                    name={club.name}
+                    />
                 ))}
             </div>
 
