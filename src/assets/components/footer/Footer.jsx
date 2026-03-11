@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import img from "../../img/logo2.png";
 
 const Footer = () => {
     return ( 
@@ -7,7 +8,7 @@ const Footer = () => {
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="#" class="logo">
-                        <div class="logo-icon">🎮</div>
+                        <div class="logo-icon"><img src={img} /></div>
                         <div class="logo-text">
                             <span class="logo-title">GameZone</span>
                             <span class="logo-sub small-text">Красноярск</span>

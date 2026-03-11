@@ -1,5 +1,7 @@
 /* hero */
 .hero {
+            margin-left: 5vw;
+    margin-right: 5vw;
     min-height: 500px;
     max-height: 100vh;
     position: relative;

@@ -1,8 +1,6 @@
-.container{
-        margin-left: 5vw;
-    margin-right: 5vw;
-}
+
 .header {
+
     position: sticky;
     top: 0;
     z-index: 100;
@@ -11,6 +9,8 @@
     border-bottom: 1px solid var(--border);
 }
 .header-inner {
+        margin-left: 5vw;
+    margin-right: 5vw;
     display: flex;
     align-items: center;
      gap: 20px;

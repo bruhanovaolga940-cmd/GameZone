@@ -146,7 +146,10 @@ h2 {
     padding: 13px 28px;
     font-size: 1rem;
 }
-
+.cards{
+margin-left: 5vw;
+    margin-right: 5vw;
+}
 .clubs-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -154,6 +157,7 @@ h2 {
     padding-bottom: 100px;
 }
 .footer {
+
     background: var(--bg-secondary);
     border-top: 1px solid var(--border);
     padding: 44px 0 24px;
@@ -161,6 +165,8 @@ h2 {
 }
 
 .footer-grid {
+         margin-left: 5vw;
+    margin-right: 5vw;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 32px;
@@ -201,6 +207,8 @@ h2 {
 }
 
 .footer-bottom {
+             margin-left: 5vw;
+    margin-right: 5vw;
     padding-top: 20px;
     border-top: 1px solid var(--border);
     display: flex;
@@ -210,4 +218,106 @@ h2 {
     color: var(--text-muted);
     flex-wrap: wrap;
     gap: 8px;
+}
+
+
+/* Serch */
+.search-section {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 22px 5vw;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-input-wrap {
+    position: relative;
+    flex: 1;
+}
+
+.search-input-icon {
+
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+.search-input-icon img{
+    height: 24px;
+    width: 24px;
+}
+.search-input-wrap input {
+    padding-left: 42px;
+    height: 44px;
+    font-size: 0.9rem;
+}
+
+.search-bar select {
+    width: auto;
+    min-width: 175px;
+    height: 44px;
+}
+
+.filter-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.filter-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.filter-chip {
+    padding: 5px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all var(--tr);
+    white-space: nowrap;
+}
+
+.filter-chip:hover,
+.filter-chip.active {
+    border-color: var(--accent-purple);
+    background: rgba(124, 92, 191, 0.1);
+    color: var(--accent-purple-lg);
+}
+
+select{
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none;
+    background: var(--bg-input);
+    background-image: url(down.svg) ;
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 34px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    color: var(--text-primary);
+    outline: none;
+    width: auto;
+    transition: border-color var(--tr), box-shadow var(--tr);
+}
+select:focus {
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 0 3px rgba(124, 92, 191, 0.14);
 }

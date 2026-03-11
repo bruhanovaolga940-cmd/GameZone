@@ -27,12 +27,12 @@
 
 .badge{
     margin: 10px 0;
-    padding: 10px 15px;
+    padding: 5px 10px;
     background-color: var(--bg-card-hover);
     width: fit-content;
     border: 1px var(--border) solid;
-      border-top-right-radius: 30px;
-  border-bottom-left-radius: 20px;
+      border-top-right-radius: 25px;
+  border-bottom-left-radius: 15px;
 }
 
 .badge-open{
