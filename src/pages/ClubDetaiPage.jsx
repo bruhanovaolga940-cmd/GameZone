@@ -4,7 +4,7 @@ import { clubs } from "../assets/helpers/ClubList.jsx";
 const ClubDetailPage=()=> {
     const { id }      = useParams();
     const navigate    = useNavigate();
-    const club = clubs[id];
+    const club = clubs.find(c => c.id === Number(id));
 
     // Ищем клуб по id
     // id из useParams — строка, club.id — число, поэтому Number(id)

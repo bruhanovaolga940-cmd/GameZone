@@ -5,17 +5,23 @@ const Clubs=()=> {
     return (
         <div className="container">
 
-            <h1 style={{ margin: "32px 0 24px" }}>
-                Игровые клубы Красноярска
-            </h1>
-
+            
+<h1 style={{ margin: "32px 0 24px" }}>
+                Игровые клубы Красноярска</h1>
             {/* Рендерим карточку для каждого клуба */}
             <div className="clubs-grid">
+                
                 {clubs.map(club => (
                     <ClubCard key={club.id} 
                     club={club} 
                     id={club.id} 
                     name={club.name}
+                    desc={club.desc}
+                    address={club.address}
+                    rating={club.rating}
+                    isOpen={club.isOpen}
+                    tag={club.tags}
+                    price={club.price}
                     />
                 ))}
             </div>

@@ -9,6 +9,7 @@ import Login from "./pages/Login.jsx";
 import Registration from "./pages/Registration.jsx";
 import Clubs from "./pages/Clubs.jsx";
 import ClubDetailPage from "./pages/ClubDetaiPage.jsx";
+import Footer from "./assets/components/footer/Footer.jsx";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
 
           
         </Routes>
+        <Footer />
       </Router>
       </div>
   )
