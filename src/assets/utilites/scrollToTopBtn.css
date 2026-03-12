@@ -1,0 +1,31 @@
+
+.scroll-to-top {
+    position:      fixed;      /* фикс на экране */
+    bottom:        30px;       /* снизу */
+    right:         30px;       /* справа */
+    z-index:       999;        /* поверх всего */
+
+    width:         45px;
+    height:        45px;
+    border-radius: 50%;        /* круглая */
+    border:        none;
+
+    background:    var(--accent);
+    color:         white;
+    font-size:     1.2rem;
+
+    cursor:        pointer;
+    transition:    all 0.3s;
+
+    /* Тень */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top:hover {
+    transform:  translateY(-3px);  /* поднимается при hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.scroll-to-top:active {
+    transform: translateY(0);
+}

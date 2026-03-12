@@ -1,0 +1,70 @@
+.about-section{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 100px;
+
+}
+.about-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 70%;
+             margin-left: 5vw;
+    margin-right: 5vw
+}
+
+.about-inner h2 {
+    font-weight: 700;
+    margin: 14px 0 12px;
+}
+
+.about-inner > p {
+    color: var(--text-secondary);
+    max-width: 560px;
+    margin: 0 auto 36px;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.about-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 24px 20px;
+    text-align: left;
+    transition: all var(--tr);
+}
+
+.about-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.about-card-icon {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.about-card h4 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.about-card p {
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}

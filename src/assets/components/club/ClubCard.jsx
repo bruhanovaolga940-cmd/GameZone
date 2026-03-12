@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "../club/club.css";
+import "./club.css";
 
  const ClubCard=({id, name, desc, address, rating, isOpen, tag, price})=> {
 

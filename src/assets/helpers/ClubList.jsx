@@ -10,7 +10,7 @@ const clubs = [
         reviewsCount: 124,
         icon: "🖥️",
         isOpen: true,
-        tags: ["vr", "ps", "food", "open"],
+        tags: ["vr", "ps", "food"],
         tagLabels: ["VR", "PlayStation", "Еда", "Турниры"],
         desc: "Современный игровой клуб с топовым оборудованием. 60 мощных ПК на базе RTX 4070, зона PlayStation 5, VR-арена. Уютная атмосфера, бар с едой и напитками. Регулярно проводим турниры по CS2, Dota 2, Valorant.",
         schedule: [
@@ -39,7 +39,7 @@ const clubs = [
         reviewsCount: 87,
         icon: "🎯",
         isOpen: true,
-        tags: ["night", "food", "open"],
+        tags: ["night", "food" ],
         tagLabels: ["Ночные тарифы", "Напитки", "Турниры"],
         desc: "Клуб для настоящих геймеров. 45 ПК с мониторами 144 Гц, гарнитуры HyperX, профессиональные мыши и клавиатуры. Выгодные ночные тарифы, еженедельные турниры. Есть зона отдыха с диванами.",
         schedule: [
@@ -95,7 +95,7 @@ const clubs = [
         reviewsCount: 210,
         icon: "🏆",
         isOpen: true,
-        tags: ["ps", "food", "open"],
+        tags: ["ps", "food",  ],
         tagLabels: ["PS5", "Турниры", "Бар"],
         desc: "Большой игровой центр с 80 ПК и зоной PlayStation 5. Профессиональная площадка для турниров. Полноценный бар с едой и алкоголем. Отдельные кабинки для командных игр. Парковка рядом.",
         schedule: [
@@ -124,7 +124,7 @@ const clubs = [
         reviewsCount: 41,
         icon: "🌐",
         isOpen: true,
-        tags: ["night", "open"],
+        tags: ["night" ],
         tagLabels: ["Бюджетно", "24/7"],
         desc: "Бюджетный клуб, работающий круглосуточно. 25 ПК среднего уровня, стабильный интернет. Идеально для тех, кто хочет поиграть недорого в любое время суток. Есть кофе и снэки.",
         schedule: [
@@ -152,7 +152,7 @@ const clubs = [
         reviewsCount: 302,
         icon: "💎",
         isOpen: true,
-        tags: ["vr", "ps", "food", "open"],
+        tags: ["vr", "ps", "food" ],
         tagLabels: ["VR", "PS5", "Бар", "Lounge"],
         desc: "Премиальный игровой клуб. 100 ПК на базе RTX 4090, кресла Herman Miller, мониторы 240 Гц. Большая VR-арена, зал PS5 с 12 местами, lounge-зона с баром. Лучшее место для корпоративов и турниров.",
         schedule: [

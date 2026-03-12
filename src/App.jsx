@@ -11,12 +11,16 @@ import Clubs from "./pages/Clubs.jsx";
 import ClubDetailPage from "./pages/ClubDetaiPage.jsx";
 import Footer from "./assets/components/footer/Footer.jsx";
 
+import ScrollToTop from "./assets/utilites/ScrollToTop.jsx";
+import ScrollToTopBtn from "./assets/utilites/ScrollToTopBtn.jsx";
+
 function App() {
 
   return (
     <div className="App">
 
       <Router>
+        <ScrollToTop />
         <Header />
         <Routes >
           <Route path="/" element={<Home />}></Route>
@@ -30,6 +34,7 @@ function App() {
           
         </Routes>
         <Footer />
+        <ScrollToTopBtn />
       </Router>
       </div>
   )
