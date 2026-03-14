@@ -1,4 +1,7 @@
 import "../about/about.css" ;
+import dataImg from "../../img/data.png";
+import zvezda from "../../img/zvezda.png";
+import community from "../../img/community.png";
 
 const About = () => {
     return ( 
@@ -11,17 +14,17 @@ const About = () => {
                     лучшее место для игр — рядом с домом или работой.</p>
                 <div  className="about-cards">
                     <div  className="about-card">
-                        <div  className="about-card-icon">🗂</div>
+                        <div  className="about-card-icon"><img src={dataImg} /></div>
                         <h4>Актуальная база</h4>
                         <p>Регулярно обновляем данные о клубах, часах работы и ценах</p>
                     </div>
                     <div  className="about-card">
-                        <div  className="about-card-icon">⭐</div>
+                        <div  className="about-card-icon"><img src={zvezda} /></div>
                         <h4>Реальные отзывы</h4>
                         <p>Только проверенные отзывы от зарегистрированных пользователей</p>
                     </div>
                     <div  className="about-card">
-                        <div  className="about-card-icon">🤝</div>
+                        <div  className="about-card-icon"><img src={community} /></div>
                         <h4>Сообщество</h4>
                         <p>Помогай развивать базу — предлагай новые места и дополняй информацию</p>
                     </div>

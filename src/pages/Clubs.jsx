@@ -133,7 +133,7 @@ const Clubs=()=> {
                     />
                 ))):(
                     <div className="empty-state">
-                        <div className="empty-icon">🔍</div>
+                        <div className="empty-icon">:(</div>
                         <p>Ничего не найдено</p>
                         <button
                             className="btn btn-ghost btn-sm"
