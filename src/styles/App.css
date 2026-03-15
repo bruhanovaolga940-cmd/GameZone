@@ -367,6 +367,9 @@ background: linear-gradient(180deg, rgb(14, 14, 22), rgb(30, 30, 48));
 .info{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin-top: 20px;
+        margin-bottom: 50px;
+
 }
 .info-title{
     text-transform: uppercase;
@@ -386,4 +389,9 @@ background: linear-gradient(180deg, rgb(14, 14, 22), rgb(30, 30, 48));
     padding: 10px;
     background-color: var(--bg-secondary);
     border-radius: 10px;
+}
+.desc{
+    margin-top: 20px;
+    color: var(--text-secondary);
+    width: 80%;
 }

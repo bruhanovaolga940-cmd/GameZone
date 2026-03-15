@@ -59,7 +59,7 @@ const ClubDetailPage=()=> {
                         <div className="info-icon"><img src={adressicon} />
                         </div>
                         <div className="info-block-text">
-                            <p className="info-title middle-text">Адрес</p>
+                            <p className="info-title small-text">Адрес</p>
                             <p>{club.address}</p>
                         </div>
                     </div>
@@ -68,7 +68,7 @@ const ClubDetailPage=()=> {
                         <div className="info-icon"><img src={phone} />
                         </div>
                         <div className="info-block-text">
-                            <p className="info-title middle-text ">Телефон</p>
+                            <p className="info-title small-text ">Телефон</p>
                             <p>{club.phone}</p>
                         </div>
                     </div>
@@ -77,7 +77,7 @@ const ClubDetailPage=()=> {
                         <div className="info-icon"><img src={www} />
                         </div>
                         <div className="info-block-text">
-                            <p className="info-title middle-text">Сайт</p>
+                            <p className="info-title small-text">Сайт</p>
                             <p>{club.site}</p>
                         </div>
                     </div>

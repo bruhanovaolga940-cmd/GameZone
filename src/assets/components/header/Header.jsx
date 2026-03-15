@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
-
+import { NavLink} from "react-router-dom";
+import  useSrollToSection from "../../utilites/UseScrollToSection.jsx";
 import img from "../../img/logo2.png";
 import "../header/header.css";
 
@@ -7,9 +7,10 @@ import "../header/header.css";
 
 
 
+
 const Header = () => {
-
-
+     
+    const scrollToSection = useSrollToSection();
 
     return ( 
         <header className="header">
@@ -24,6 +25,7 @@ const Header = () => {
                     </NavLink>
 
                     <nav className="header-nav">
+                        <button className="nav-link" onClick={() => scrollToSection("clubs", "/")}>Клубы</button>
                         <a href="#clubs" className="nav-link active">Клубы</a>
                         <a href="#suggest" className="nav-link">Предложить место</a>
                         <a href="#about" className="nav-link">О проекте</a>

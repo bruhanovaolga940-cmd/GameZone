@@ -5,7 +5,7 @@ import community from "../../img/community.png";
 
 const About = () => {
     return ( 
-        <div  className="container about-section">
+        <section className="container about-section">
             <div  className="about-inner">
                 <div  className="hero-eyebrow">О проекте</div>
                 <h2>GameZone Krasnoyarsk</h2>
@@ -30,7 +30,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
      );
 }
  

@@ -110,7 +110,7 @@ const Clubs=()=> {
 
 
 
-    <section className="cards">
+    <section id="clubs" className="cards">
 
         <h1 style={{ margin: "32px 0 24px" }}>Игровые клубы Красноярска</h1>
 
