@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import About from "../assets/components/about/About.jsx";
 import Hero from "../assets/components/hero/Hero.jsx";
 import Clubs from "./Clubs.jsx";
+import Suggest from "../assets/components/suggest/Suggest.jsx";
 
 const Home = () => {
      const location = useLocation();
@@ -29,6 +30,7 @@ const Home = () => {
             <Hero />
             <section id="clubs"><Clubs /></section> 
             <section id="about"><About /></section>
+            <section id="suggest"><Suggest /></section>
             
         </>
     );

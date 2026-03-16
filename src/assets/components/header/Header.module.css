@@ -8,7 +8,7 @@
     backdrop-filter: blur(14px);
     border-bottom: 1px solid var(--border);
 }
-.header-inner {
+.inner {
         margin-left: 5vw;
     margin-right: 5vw;
     display: flex;
@@ -27,7 +27,7 @@
     flex-shrink: 0;
 }
 
-.logo-icon {
+.logoicon {
     width: 36px;
     height: 36px;
     display: flex;
@@ -35,27 +35,27 @@
     justify-content: center;
 }
 
-.logo-text {
+.logotext {
     display: flex;
     flex-direction: column;
     line-height: 1;
 }
 
-.logo-title {
+.logotitle {
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: 0.3px;
 }
 
-.logo-sub {
+/* .logo-sub {
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 2px;
-}
+} */
 
 /* Nav */
-.header-nav {
+.headernav {
     display: flex;
     justify-content: center;
     gap: 2px;
@@ -87,9 +87,22 @@
 .nav-link.active {
     color: var(--accent-purple-lg);         
 }            
-.header-actions {
+.headeractions {
     flex-shrink: 0;
     display: flex;
     align-items: center;
     gap: 8px;
+}
+.btnLink{
+    padding: 10px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.active {
+  border-bottom: 2px var(--accent-purple-lg) solid;
+  color: var(--accent-purple-lg);
 }

@@ -98,7 +98,12 @@ h2 {
 .middle-text{
     font-size: 14px;
 }
-
+.logo-sub {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 2px;
+}
 /* btn */
 
 .btn {
@@ -394,4 +399,12 @@ background: linear-gradient(180deg, rgb(14, 14, 22), rgb(30, 30, 48));
     margin-top: 20px;
     color: var(--text-secondary);
     width: 80%;
+}
+
+
+
+.suggest-section {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    padding: 64px 0;
 }

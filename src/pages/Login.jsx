@@ -7,7 +7,7 @@ const Login = () => {
         <section className="form" >
             <div className="container">
                 
-                <form id="login">
+                <form className="form-body" id="login">
                     <h2>Вход</h2>
                     <div className="form-group">
                         <label htmlFor="loginEmail">Email</label>

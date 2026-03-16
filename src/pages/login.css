@@ -10,7 +10,7 @@
     margin-top: 100px;
     margin-bottom: 100px;
 }
-form{
+.form-body{
     display: flex;
     flex-direction: column;
     align-items: center;
