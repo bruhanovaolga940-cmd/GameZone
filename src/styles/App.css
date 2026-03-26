@@ -98,6 +98,11 @@ h2 {
 .middle-text{
     font-size: 14px;
 }
+.logo-text{
+    display: flex;
+    flex-direction: column;
+    line-height: 1
+}
 .logo-sub {
     color: var(--text-muted);
     text-transform: uppercase;
@@ -407,4 +412,8 @@ background: linear-gradient(180deg, rgb(14, 14, 22), rgb(30, 30, 48));
     background: var(--bg-secondary);
     border-top: 1px solid var(--border);
     padding: 64px 0;
+}
+.heart{
+    width: 24px;
+    height: 18px;
 }

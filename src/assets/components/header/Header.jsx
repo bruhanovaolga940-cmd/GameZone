@@ -26,12 +26,12 @@ const Header = () => {
     const [activeId, setActiveId] = useState(null);
 
     const handleClick = (id, path) => {
-    setActiveId(id);           // ✅ запоминаем какую кнопку нажали
-    scrollToSection(id, path); // ✅ скроллим к секции
+    setActiveId(id);           
+    scrollToSection(id, path); 
   };
 
   const handleLogout = async () => {
-    await logout(); // logout из AuthContext очищает cookie и редиректит
+    await logout(); 
   };
 
     return ( 

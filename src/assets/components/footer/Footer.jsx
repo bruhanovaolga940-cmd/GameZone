@@ -1,7 +1,12 @@
 import { NavLink } from "react-router-dom";
+import { useAuth } from "../../../context/AuthContext.jsx";
 import img from "../../img/logo2.png";
+import heart from "../../img/heart.svg"
 
 const Footer = () => {
+
+    const { isAuth, loading } = useAuth();
+
     return ( 
        <footer class="footer">
         <div class="container">
@@ -24,13 +29,30 @@ const Footer = () => {
                         <li><a href="#about">О проекте</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
+                
+
+                    {loading ? null : (
+                isAuth ? ( 
+                    
+                    <div class="footer-col">
+                        <h4>Аккаунт</h4>
+                    <ul class="footer-links">
+                        <li><NavLink to="/Profile">Профиль</NavLink></li>
+                    </ul>
+                    </div>
+                    ) : (
+
+                    <div class="footer-col">
                     <h4>Аккаунт</h4>
                     <ul class="footer-links">
                         <li><NavLink to="/Login">Войти</NavLink></li>
                         <li><NavLink to="/Registration">Регистрация</NavLink></li>
-                    </ul>
-                </div>
+                    </ul> </div>
+
+                        
+                    )
+                )}
+
                 <div class="footer-col">
                     <h4>Контакты</h4>
                     <ul class="footer-links">
@@ -42,7 +64,7 @@ const Footer = () => {
             </div>
             <div class="footer-bottom">
                 <span>© 2025 GameZone Krasnoyarsk</span>
-                <span>Сделано с ❤ для геймеров Красноярска</span>
+                <span style={{display: 'flex', alignItems: 'center'}}>Сделано с <img src={heart} className="heart"/> для геймеров Красноярска</span>
             </div>
         </div>
     </footer>
