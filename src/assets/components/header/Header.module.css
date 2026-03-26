@@ -106,3 +106,16 @@
   border-bottom: 2px var(--accent-purple-lg) solid;
   color: var(--accent-purple-lg);
 }
+.logoutBtn{
+    background: none;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+.btn{
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -13,13 +13,14 @@ import Footer from "./assets/components/footer/Footer.jsx";
 
 import ScrollToTop from "./assets/utilites/ScrollToTop.jsx";
 import ScrollToTopBtn from "./assets/utilites/ScrollToTopBtn.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
 
 function App() {
 
   return (
     <div className="App">
-
       <Router>
+        <AuthProvider>
         <ScrollToTop />
         <Header />
         <Routes >
@@ -31,8 +32,9 @@ function App() {
           {/* Страница определенного клуба */}
           <Route path="/ClubDetailPage/:id" element={<ClubDetailPage />}></Route>
 
-          
+        
         </Routes>
+        </AuthProvider>
         <Footer />
         <ScrollToTopBtn />
       </Router>

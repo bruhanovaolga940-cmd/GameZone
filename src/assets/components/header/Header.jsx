@@ -1,8 +1,12 @@
-import { NavLink} from "react-router-dom";
+import React from "react";
+import { NavLink, useNavigate} from "react-router-dom";
+import { useAuth } from "../../../context/AuthContext.jsx";
 import { useState } from "react";
 import  useSrollToSection from "../../utilites/UseScrollToSection.jsx";
 import img from "../../img/logo2.png";
+import logoutBtn from "../../img/logout.svg";
 import styles from "./Header.module.css";
+
 
 
 const NAV_ITEMS = [
@@ -17,11 +21,17 @@ const Header = () => {
      
     const scrollToSection = useSrollToSection();
 
+    const { user, isAuth, logout, loading } = useAuth();
+
     const [activeId, setActiveId] = useState(null);
 
     const handleClick = (id, path) => {
     setActiveId(id);           // ✅ запоминаем какую кнопку нажали
     scrollToSection(id, path); // ✅ скроллим к секции
+  };
+
+  const handleLogout = async () => {
+    await logout(); // logout из AuthContext очищает cookie и редиректит
   };
 
     return ( 
@@ -46,6 +56,22 @@ const Header = () => {
                         ))}
                     </nav> 
 
+
+                {loading ? null : (
+                isAuth ? (
+                <div
+                  id="authActions"
+                  style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <NavLink to="/profile" className="btn btn-outline btn-sm">
+
+                    {user?.name}
+                  </NavLink>
+
+                  <button
+                    onClick={handleLogout} className={styles.btn}> <img src={logoutBtn} className={styles.logoutBtn}/></button>
+                </div>
+
+              ) : (
                     <div className={styles.headeractions}>
                         <div id="guestActions">
                             <NavLink to="/Login" className="btn btn-outline btn-sm" >
@@ -53,6 +79,8 @@ const Header = () => {
                             </NavLink>
                         </div>
                     </div>
+              )
+            )}
                 </div>
             </div>
         </header>
