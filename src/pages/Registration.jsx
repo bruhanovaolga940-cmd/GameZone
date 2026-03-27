@@ -34,6 +34,11 @@ const Registration = () => {
         return setError('Пароли не совпадают')
     }
 
+    // проверить
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+    return setError('Некорректный email')}
+
     setIsLoading(true);
 
     try {
