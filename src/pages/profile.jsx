@@ -17,7 +17,7 @@ const Profile = () => {
     return <Navigate to="/Login" replace />;
   }
 
-  // ── Форматирование даты регистрации ───────────────────────
+  // ── Форматирование даты регистрации хз зачем ───────────────────────
   const formattedDate = user.created_at
     ? new Date(user.created_at).toLocaleDateString('ru-RU', {
         day:   '2-digit',
