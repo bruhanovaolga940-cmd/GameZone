@@ -14,32 +14,35 @@ import Footer from "./assets/components/footer/Footer.jsx";
 import ScrollToTop from "./assets/utilites/ScrollToTop.jsx";
 import ScrollToTopBtn from "./assets/utilites/ScrollToTopBtn.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
+import { FavProvider } from "./context/FavContext.jsx";
 import Profile from "./pages/profile.jsx";
+// import ResetPassword from "./pages/RessetPassword.jsx";
 
 function App() {
 
   return (
     <div className="App">
+      
       <Router>
-        <AuthProvider>
-        <ScrollToTop />
-        <Header />
-        <Routes >
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/Login" element={<Login />}></Route>
-          <Route path="/Registration" element={<Registration />}></Route>
-          {/* Страница с клубами */}
-          <Route path="/Clubs" element={<Clubs />}></Route> 
-          {/* Страница определенного клуба */}
-          <Route path="/ClubDetailPage/:id" element={<ClubDetailPage />}></Route>
-          <Route path="/profile" element={<Profile />}  />
-
-        
-        </Routes>
-        <Footer />
-        </AuthProvider>
-        
-        <ScrollToTopBtn />
+          <AuthProvider>
+            <FavProvider>
+            <ScrollToTop />
+            <Header />
+              <Routes >
+                <Route path="/" element={<Home />}></Route>
+                <Route path="/Login" element={<Login />}></Route>
+                <Route path="/Registration" element={<Registration />}></Route>
+                {/* Страница с клубами */}
+                <Route path="/Clubs" element={<Clubs />}></Route> 
+                {/* Страница определенного клуба */}
+                <Route path="/ClubDetailPage/:id" element={<ClubDetailPage />}></Route>
+                <Route path="/profile" element={<Profile />}  />
+                {/* <Route path="/resetPassword" element={<ResetPassword />} /> */}
+              </Routes>
+            <Footer />
+            </FavProvider>
+          </AuthProvider>
+          <ScrollToTopBtn />
       </Router>
       </div>
   )

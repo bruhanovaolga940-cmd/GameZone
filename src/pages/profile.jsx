@@ -1,8 +1,11 @@
 import React from "react";
 import { useAuth } from "../context/AuthContext";
+import { useFav } from "../context/FavContext";
+import ClubCard   from "../assets/components/club/ClubCard.jsx";
 
 const Profile = () => {
     const { user, isAuth, loading, logout } = useAuth();
+    const {favorites, removeFav} = useFav();
 
      if (loading) {
     return (
@@ -29,8 +32,34 @@ const Profile = () => {
 
     return ( 
         <div  className="container">
-        <h1>Профиль</h1>
-        <p>Вы {user.name}</p> 
+          <div className="profile">
+            <div className="main-info">
+              <h2 className="mb-1">Профиль</h2>
+              <h1 className="mb-2" >Добро пожаловать, {user.name}!</h1>
+              <hr className="mb-2"/>
+              </div>
+              <div className="fav">
+                <p className="mb-2">В избранном ({favorites.length})</p>
+                <div className="clubs-grid">
+                  {favorites.length === 0 ? (
+                    <p> Вы еще не добавили ничего в избранное :(</p>) : 
+                    (favorites.map(club => (
+                  <ClubCard key={club.id} 
+                  club={club} 
+                  id={club.id} 
+                  name={club.name}
+                  desc={club.desc}
+                  address={club.address}
+                  rating={club.rating}
+                  isOpen={club.isOpen}
+                  tag={club.tags}
+                  price={club.price}
+                    />
+                  )))}
+                </div>
+              </div>
+          </div>
+         
         </div>
         
 

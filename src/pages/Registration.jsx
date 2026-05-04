@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { generateAvatar } from "../assets/utilites/RandomAvatar";
 import "./login.css";
 
 const Registration = () => {
@@ -42,7 +43,8 @@ const Registration = () => {
     setIsLoading(true);
 
     try {
-        await register(name.trim(), email.trim(), password);
+        const avatar = generateAvatar(email);
+        await register(name.trim(), email.trim(), password, avatar);
     } catch (err) {
         setError(err.message);
     } finally {

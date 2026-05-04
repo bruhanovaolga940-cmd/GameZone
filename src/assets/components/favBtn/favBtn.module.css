@@ -1,0 +1,29 @@
+.button{
+    width: 24px;
+    height: 24px;
+    background: none;
+    box-shadow: none;
+    outline: none;
+    margin: 0;
+    border: 0;
+    cursor: pointer;
+}
+.button:hover{
+    transform: scale(1.2)
+
+}
+.fav{
+    position: relative;
+}
+.errMessage{
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    background: var(--bg-secondary);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 13px;
+    z-index: 100;
+}

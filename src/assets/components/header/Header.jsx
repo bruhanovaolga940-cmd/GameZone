@@ -12,7 +12,7 @@ import styles from "./Header.module.css";
 const NAV_ITEMS = [
   { id: "clubs",     label: "Клубы"  },
   { id: "about",    label: "О проекте"    },
-  { id: "contacts", label: "Контакты" },
+  { id: "suggest", label: "Обратная связь" },
 ];
 
 

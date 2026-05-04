@@ -1,13 +1,17 @@
 import { useParams, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { clubs } from "../assets/helpers/ClubList.jsx";
 import adressicon from "../assets/img/address.svg"
 import phone from "../assets/img/phone.svg"
 import www from "../assets/img/www.svg"
+import { FavBtn } from "../assets/components/favBtn/favBtn.jsx";
 
 const ClubDetailPage=()=> {
     const { id }      = useParams();
     const navigate    = useNavigate();
     const club = clubs.find(c => c.id === Number(id));
+
+    const [activeImg, setActiveImg] = useState(null);
 
     // Ищем клуб по id
     // id из useParams — строка, club.id — число, поэтому Number(id)
@@ -29,6 +33,10 @@ const ClubDetailPage=()=> {
         );
     }
 
+    const galleryImages = Array.isArray(club.gallery)
+        ? club.gallery
+        : [club.gallery];
+
     return (
         <div className="club-detail">
             {/* hero */}
@@ -45,6 +53,9 @@ const ClubDetailPage=()=> {
                         ))}
                     </div>
                     <span class="price middle-text">{club.price}</span>
+                </div>
+                <div className="fav">
+                    <FavBtn club={club} />
                 </div>
             </div>
 
@@ -78,7 +89,7 @@ const ClubDetailPage=()=> {
                         </div>
                         <div className="info-block-text">
                             <p className="info-title small-text">Сайт</p>
-                            <p>{club.site}</p>
+                            <a href={club.site} target="__blank">{club.site}</a>
                         </div>
                     </div>
                     </div>
@@ -87,11 +98,46 @@ const ClubDetailPage=()=> {
                 </div>
 
                 <div className="block description">
-                    <h2>Описание:</h2>
+                    <h2>Описание</h2>
                     <div className="desc">{club.desc}</div>
                 </div>
+
+                <div className="gallery">
+                    {galleryImages.length > 0 && (
+                    <div className="gallery">
+                        <h2 className="mb-2">Галерея</h2>
+                        <div className="gallery-grid">
+                            {galleryImages.map((img, id) => (
+                                <div
+                                    key={id}
+                                    className="gallery-item"
+                                    onClick={() => setActiveImg(img)}>
+                                    <img
+                                        src={img}
+                                        alt='...'/>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    )}
+                </div>
+
+                {activeImg && (
+                <div
+                    className="lightbox"
+                    onClick={() => setActiveImg(null)}>
+                    <div className="lightbox-content" onClick={e => e.stopPropagation()}>
+                        <img src={activeImg} alt="Увеличенное фото" />
+                        <button
+                            className="lightbox-close"
+                            onClick={() => setActiveImg(null)}
+                        > ✕ </button>
+                    </div>
+                </div>
+            )}
+
             </div>
-        </div>
+        </div> 
     );
 }
 

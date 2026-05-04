@@ -6,10 +6,8 @@ const API_URL = 'http://localhost:5000';
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
-  const [user, setUser]       = useState(null);
-
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -44,13 +42,13 @@ export function AuthProvider({ children }) {
    * @param {string} password - пароль
    * @throws {Error} - если регистрация не удалась (передаём в компонент)
    */
-  const register = async (name, email, password) => {
+  const register = async (name, email, password, avatar) => {
     // Шаг 1: регистрируем пользователя
     const regRes = await fetch(`${API_URL}/api/register`, {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       credentials: 'include',
-      body: JSON.stringify({ name, email, password }),
+      body: JSON.stringify({ name, email, password, avatar}),
     });
 
     const regData = await regRes.json();
@@ -71,7 +69,7 @@ export function AuthProvider({ children }) {
    * @param {string} password
    * @throws {Error} - если вход не удался
    */
-  const login = async (email, password) => {
+  const login = async (email, password, avatar) => {
     const res = await fetch(`${API_URL}/api/login`, {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
