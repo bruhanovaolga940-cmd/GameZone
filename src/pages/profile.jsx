@@ -54,6 +54,7 @@ const Profile = () => {
                   isOpen={club.isOpen}
                   tag={club.tags}
                   price={club.price}
+                  img={club.img}
                     />
                   )))}
                 </div>
