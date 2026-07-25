@@ -63,7 +63,7 @@ const Footer = () => {
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>© 2025 GameZone Krasnoyarsk</span>
+                <span>&copy; 2026 GameZone Krasnoyarsk</span>
                 <span style={{display: 'flex', alignItems: 'center'}}>Сделано с <img src={heart} className="heart"/> для геймеров Красноярска</span>
             </div>
         </div>
