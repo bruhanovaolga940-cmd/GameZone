@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
-import "../styles/App.css"
+import "./styles/App.css"
 
 
 import Header from "./assets/components/header/Header.jsx";
@@ -11,7 +11,7 @@ import Clubs from "./pages/Clubs.jsx";
 import ClubDetailPage from "./pages/ClubDetailPage.jsx";
 import Footer from "./assets/components/footer/Footer.jsx";
 
-import ScrollToTop from "./assets/utilities/ScrollToTop.js";
+import ScrollToTop from "./assets/utilities/ScrollToTop.jsx";
 import ScrollToTopBtn from "./assets/utilities/ScrollToTopBtn.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import { FavProvider } from "./context/FavContext.jsx";

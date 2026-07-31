@@ -6,7 +6,7 @@ import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import cookieParser from 'cookie-parser'
 import cors from 'cors'
-import nodemailer from 'nodemailer'
+
 
 const app = express();
 
