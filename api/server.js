@@ -11,7 +11,7 @@ import nodemailer from 'nodemailer'
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'http://localhost:5173', 
   credentials: true,
 }));
 
@@ -160,13 +160,6 @@ app.post('/api/register', async (req, res) => {
 app.post('/api/login', async (req, res) => {
   const { email, password } = req.body;
 
-  // Валидация входных данных
-  // if (!email || !password) {
-  //   return res.status(400).json({
-  //     ok: false,
-  //     message: 'Email и пароль обязательны',
-  //   });
-  // }
 
   try {
     // Ищем пользователя по email
@@ -256,78 +249,7 @@ clearTokenCookie(res);
   return res.json({ ok: true });
 });
 
-// смена пароля
-// const transporter = nodemailer.createTransporter({
-//   service: 'gmail',
-//   auth: {
-//     user: 'bruhanovaolga940@gmail.com',
-//     pass: 'wqiamavgzusadown'
-//   }
-// });
 
-// app.post('/api/forgotPassword', async (req, res) => {
-//   const {email} = req.body;
-
-//   if (!email) {
-//     return res.status(400).json({error:"введите email"})
-//   }
-//   try{
-//     const [row] = await pool.execute('SELECT id FROM users WHERE email = ?' , [email]);
-
-//     if (row.length === 0) {
-//       return res.status(200).json({message:"Перейдите на почту, для продолжения"})
-//     }
-//     const userId = row[0].id;
-//     const resetToken = crypto.getRandomValues(32).toString('hex');
-//     const expires = new Date(Date.now() + 3600000);
-
-//     await pool.execute(
-//       'UPDATE users SET reset_token = ?, reset_token_expires = ? WHERE id = ?', [resetToken, expires, userId
-//       ]);
-
-//       await transporter.sendMail({
-//         to: email,
-//         subject: 'Сброс пароля',
-//         html: '<p>Перейдите по ссылке для сброса пароля: </p><a href="${resetLink}">${resetLink}</a>'
-
-//       })
-
-//       pool.close();
-//       res.json({message: "if auth you get email"});
-//     } catch(err){
-//       console.error(err);
-//       res.status(500).json({error: "cannot connect with server"})
-//     }
-// });
-
-// // reset password
-// app.post('/api/resetPassword', async (req, res) => {
-//   const { token, newPassword } = req.body;
-
-//   if (!token || !newPassword) {
-//     return res.status(400).json({error: 'check inputs'});
-//   }
-//   try {
-//     const [rows] = await pool.execute(
-//       'SELECT id FROM users WHERE reset_token = ? AND reset_token_expires > NOW()', [token]
-//     );
-//     if (rows.length === 0) {
-//       return res.status(400).json({error: "invalid "})
-//     }
-//     const userId = rows[0].id;
-//     const passwordHash = await bcrypt.hash(newPassword, 10);
-
-//     await pool.execute(
-//       'UPDATE users SET password = ?, reset_token = NULL, reset_token_expires = NULL WHERE id = ?', [passwordHash, userId]
-//     );
-//     pool.close();
-//     res.json({message: "succesed"})
-//   } catch(err){
-//     console.error(err);
-//     res.status(500).json({error: "error"})
-//   }
-//   })
-  // reset password
 // ────────────────────────────────────────────────────────────
 // ЗАПУСК СЕРВЕРА
 // ────────────────────────────────────────────────────────────

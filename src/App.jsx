@@ -16,7 +16,6 @@ import ScrollToTopBtn from "./assets/utilites/ScrollToTopBtn.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import { FavProvider } from "./context/FavContext.jsx";
 import Profile from "./pages/profile.jsx";
-// import ResetPassword from "./pages/RessetPassword.jsx";
 
 function App() {
 
