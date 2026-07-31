@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { clubs } from "../assets/helpers/ClubList.jsx";
 import ClubCard   from "../assets/components/club/ClubCard.jsx";
-import img from "../pages/poisk.png";
+import img from "../assets/img/poisk.png";
 
 const Clubs=()=> {
 
