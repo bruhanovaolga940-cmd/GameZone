@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink, useNavigate} from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext.jsx";
 import { useState } from "react";
-import  useSrollToSection from "../../utilites/UseScrollToSection.jsx";
+import  useSrollToSection from "../../utilities/UseScrollToSection.js";
 import img from "../../img/logo2.png";
 import logoutBtn from "../../img/logout.svg";
 import styles from "./Header.module.css";

@@ -1,4 +1,4 @@
-import useForm from "../../utilites/useForm.jsx";
+import useForm from "../../utilities/UseForm.jsx";
 import "./Suggest.css";
 
 const Suggest = () => {

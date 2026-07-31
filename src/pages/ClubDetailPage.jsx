@@ -4,7 +4,7 @@ import { clubs } from "../assets/helpers/ClubList.jsx";
 import adressicon from "../assets/img/address.svg"
 import phone from "../assets/img/phone.svg"
 import www from "../assets/img/www.svg"
-import { FavBtn } from "../assets/components/favBtn/favBtn.jsx";
+import { FavBtn } from "../assets/components/favBtn/FavBtn.jsx";
 
 const ClubDetailPage=()=> {
     const { id }      = useParams();

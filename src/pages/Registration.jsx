@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import { generateAvatar } from "../assets/utilites/RandomAvatar";
+import { generateAvatar } from "../assets/utilities/RandomAvatar";
 import "./login.css";
 
 const Registration = () => {

@@ -6,10 +6,9 @@ import "./login.css";
 
 const Login = () => {
 
-    const [email, setEmail]         = useState('');
-  const [password, setPassword]   = useState('');
+    const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
 
-  // ── Состояние UI ──────────────────────────────────────────
   const [error, setError]         = useState('');
   const [isLoading, setIsLoading] = useState(false);
 

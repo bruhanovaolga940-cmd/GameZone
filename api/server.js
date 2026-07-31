@@ -11,7 +11,7 @@ import nodemailer from 'nodemailer'
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:5173', 
+  origin: process.env.FRONT_URL, 
   credentials: true,
 }));
 
@@ -26,9 +26,7 @@ const pool = mysql.createPool({
   database: process.env.DB_NAME,
   waitForConnections: true,
   connectionLimit: 10,  
-  // queueLimit: 0,
 });
-
 
 // Проверка подключения 
 (async () => {

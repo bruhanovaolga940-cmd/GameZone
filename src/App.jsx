@@ -8,11 +8,11 @@ import Home from "./pages/home";
 import Login from "./pages/Login.jsx";
 import Registration from "./pages/Registration.jsx";
 import Clubs from "./pages/Clubs.jsx";
-import ClubDetailPage from "./pages/ClubDetaiPage.jsx";
+import ClubDetailPage from "./pages/ClubDetailPage.jsx";
 import Footer from "./assets/components/footer/Footer.jsx";
 
-import ScrollToTop from "./assets/utilites/ScrollToTop.jsx";
-import ScrollToTopBtn from "./assets/utilites/ScrollToTopBtn.jsx";
+import ScrollToTop from "./assets/utilities/ScrollToTop.js";
+import ScrollToTopBtn from "./assets/utilities/ScrollToTopBtn.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 import { FavProvider } from "./context/FavContext.jsx";
 import Profile from "./pages/Profile.jsx";

@@ -8,7 +8,6 @@ const useScrollToSection = () => {
     const isCurrentPage = location.pathname === targetPath;
 
     if (isCurrentPage) {
-      // ✅ Мы уже на нужной странице — просто скроллим
       const section = document.getElementById(sectionId);
 
       if (section) {
@@ -18,7 +17,6 @@ const useScrollToSection = () => {
         });
       }
     } else {
-      // ✅ Переходим на нужную страницу с хэшем
       navigate(`${targetPath}#${sectionId}`);
     }
   };
