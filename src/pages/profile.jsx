@@ -1,4 +1,5 @@
 import React from "react";
+import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext.jsx";
 import { useFav } from "../context/FavContext.jsx";
 import ClubCard   from "../assets/components/club/ClubCard.jsx";
