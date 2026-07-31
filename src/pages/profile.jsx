@@ -1,6 +1,6 @@
 import React from "react";
-import { useAuth } from "../context/AuthContext";
-import { useFav } from "../context/FavContext";
+import { useAuth } from "../context/AuthContext.jsx";
+import { useFav } from "../context/FavContext.jsx";
 import ClubCard   from "../assets/components/club/ClubCard.jsx";
 
 const Profile = () => {
